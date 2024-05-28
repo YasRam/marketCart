@@ -20,27 +20,64 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/cart.html">Cart</a>
-              </li>
-            </ul>
-            
-          </div>
-        </div>
-      </nav>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/cart.html">Cart</a>
+                    </li>
+                </ul>
 
+            </div>
+        </div>
+    </nav>
 
 
     <div class="container-fluid">
+        <table class="table" dir="rtl">
+            <thead>
+                <th>*</th>
+                <th>المنتج</th>
+                <th>السعر</th>
+                <th></th>
+                <th>العدد</th>
+                <th></th>
+                <th>اجمالى السعر</th>
+                <th>مسح</th>
+            </thead>
+            <tbody id="table-rows">
+
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>الاجمالى</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="totalAll"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="d-flex justify-content-center gap-2">
+        <button type="button" class="btn btn-success" onclick="deleteAll()">مسح العربة</button>
+        <button type="button" class="btn btn-success" onclick="sendWhatsapp()">الطلب عن طريق الواتساب</button>
+    </div>
+
+    <!-- <div class="container-fluid">
         <table id="fresh-table" class="table">
             <thead>
                 <th>*</th>
@@ -51,100 +88,7 @@
                 <th>Total</th>
                 <th>delete</th>
             </thead>
-            <tbody>
-                <tr>
-                    <td>4</td>
-                    <td>422</td>
-                    <td>Dakota Rice</td>
-                    <td>$36,738</td>
-                    <td><button type="button" class="btn btn-success">&lt;</button>
-                        1
-                        <button type="button" class="btn btn-secondary">&gt;</button>
-                    </td>
-                    <td>$36,738</td>
-
-                    <td><button type="button" class="btn btn-danger">-</button></td>
-                </tr>
-
-
-                <tr>
-                    <td>4</td>
-                    <td>422</td>
-                    <td>Dakota Rice</td>
-                    <td>$36,738</td>
-                    <td><button type="button" class="btn btn-success">&lt;</button>
-                        1
-                        <button type="button" class="btn btn-secondary">&gt;</button>
-                    </td>
-                    <td>$36,738</td>
-
-                    <td><button type="button" class="btn btn-danger">-</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>422</td>
-                    <td>Dakota Rice</td>
-                    <td>$36,738</td>
-                    <td><button type="button" class="btn btn-success">&lt;</button>
-                        1
-                        <button type="button" class="btn btn-secondary">&gt;</button>
-                    </td>
-                    <td>$36,738</td>
-
-                    <td><button type="button" class="btn btn-danger">-</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>422</td>
-                    <td>Dakota Rice</td>
-                    <td>$36,738</td>
-                    <td><button type="button" class="btn btn-success">&lt;</button>
-                        1
-                        <button type="button" class="btn btn-secondary">&gt;</button>
-                    </td>
-                    <td>$36,738</td>
-
-                    <td><button type="button" class="btn btn-danger">-</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>422</td>
-                    <td>Dakota Rice</td>
-                    <td>$36,738</td>
-                    <td><button type="button" class="btn btn-success">&lt;</button>
-                        1
-                        <button type="button" class="btn btn-secondary">&gt;</button>
-                    </td>
-                    <td>$36,738</td>
-
-                    <td><button type="button" class="btn btn-danger">-</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>422</td>
-                    <td>Dakota Rice</td>
-                    <td>$36,738</td>
-                    <td><button type="button" class="btn btn-success">&lt;</button>
-                        1
-                        <button type="button" class="btn btn-secondary">&gt;</button>
-                    </td>
-                    <td>$36,738</td>
-
-                    <td><button type="button" class="btn btn-danger">-</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>422</td>
-                    <td>Dakota Rice</td>
-                    <td>$36,738</td>
-                    <td><button type="button" class="btn btn-success">&lt;</button>
-                        1
-                        <button type="button" class="btn btn-secondary">&gt;</button>
-                    </td>
-                    <td>$36,738</td>
-
-                    <td><button type="button" class="btn btn-danger">-</button></td>
-                </tr>
+            <tbody id="table-row">
                 <tr>
                     <td>4</td>
                     <td>422</td>
@@ -198,28 +142,13 @@
                     <td><button type="button" class="btn btn-danger">-</button></td>
                 </tr>
 
-                <tr>
-                    <td>4</td>
-                    <td>422</td>
-                    <td>Dakota Rice</td>
-                    <td>$36,738</td>
-                    <td><button type="button" class="btn btn-success">&lt;</button>
-                        1
-                        <button type="button" class="btn btn-secondary">&gt;</button>
-                    </td>
-                    <td>$36,738</td>
-                    <td><button type="button" class="btn btn-danger">-</button></td>
-                </tr>
             </tbody>
         </table>
-    </div>
-
-    <script src="js/cartLogic.js"></script>
+    </div> -->
+    <script src="js/jquery-3.7.1.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.7.1.js"></script>
-    <script src="js/main.js"></script>
 
     <script src="https://unpkg.com/bootstrap-table/dist/bootstrap-table.min.js"></script>
     <script type="text/javascript">
@@ -233,6 +162,7 @@
             })
         })
     </script>
+    <script src="js/cartLogic.js"></script>
 </body>
 
 </html>
