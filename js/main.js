@@ -56,14 +56,11 @@ localStorage.getItem('myCart') ? cart = JSON.parse(localStorage.getItem('myCart'
 
 function display() {
     products.map((product, index) => {
-            let container = `<div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                <img src="img/1.png" alt="" class="w-100">
+            let container = `<div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center ">
+                <img src="img/1.png" alt="" class="w-100 rounded">
                 <h3>${product.productName}</h3>
                 <p class="m-0 p-0">${product.productDesc}</p>
-                <div class="btn btn-group w-100">
-                    <button type="button" class="btn btn-info" onclick = 'addToCard(${index})'>add </button>
-                    <button type="button" class="btn btn-success" onclick = 'addToCart(${index})'>Detailes </button>
-                </div>
+                    <button type="button" class="btn btn-info w-75 my-2" onclick = 'addToCart(${index})'>add </button>
             </div>`;
             $('#products').append(container);
         }
@@ -95,25 +92,4 @@ function addToCart(index) {
     }
 
     setCartIocal()
-
-    // let newproduct = products.slice(index, index + 1);
-    // let search = cart.filter((product) => { product.productId == newproduct[0].productId; 
-    //     console.log('product', product.productId);
-    //     console.log('newproduct' ,newproduct[0].productId);
-    // });
-
-    // if (search.length > 0) {
-    //     console.log("increase");
-
-    // for (let i = 0; i < cart.length; i++) {
-    //     if (id == cart[i].productId) {
-    //         cart[i].productCount++
-    //         x = true
-    //     }
-    // }
-    // } else {
-    //     newproduct[0].productCount = 1;
-    //     cart.push(newproduct[0]);
-    // }
-
 }
